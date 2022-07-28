@@ -262,9 +262,10 @@ h6 {
     width: 90%;
     display: grid;
     grid-template-columns: 33% 33% 33%;
+    justify-content: center;
     align-items: center;
     background-color: rgb(226, 226, 226);
-    border: 1px solid rgb(146, 146, 146);
+    /* border: 1px solid rgb(146, 146, 146); */
     border-radius: 5px;
 }
 
@@ -277,6 +278,7 @@ h6 {
 .add_reduce>div span {
     background-color: #fafafa;
     padding: 0 5px;
+    text-align: center;
 }
 
 .btnremoveOrder button {
@@ -308,9 +310,82 @@ h6 {
 }
 
 .signup>div {
-    width: 35%;
+    width: 30%;
     height: 70%;
     background-color: #fafafa;
+}
+
+.signup>div p {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+form div {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 2px solid #94949498;
+    margin-bottom: 50px;
+
+}
+
+form>div input {
+    border: none;
+    width: 100%;
+    padding-top: 20px 0;
+    padding-left: 10px;
+    background: transparent;
+
+}
+
+form>div input:focus {
+    outline: none;
+}
+
+.signbtn {
+    border: none;
+}
+
+.signbtn button {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    background-color: #4bf145;
+    font-size: 1rem;
+    color: white;
+}
+
+.newAccount {
+    border: none;
+    border-top: 1px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.newAccount p {
+    padding-top: 10px;
+    font-size: 1rem !important;
+    text-align: center !important;
+}
+
+.newAccount p a {
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.signUpNone {
+    display: none;
+}
+
+.signupbackNone {
+    display: none;
 }
 
 @media screen and (max-width:1190px) {
