@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="cart.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="d-flex justify-content-between align-items-center">
+        <button class="navbtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="icon">
+            <h1>Elux Mart</h1>
+            <div class="on"></div>
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="d-flex justify-content-center">
+                <div class="menstuff">
+                    <button class="bbtn bbtn1  bbtnNone">Men <span
+                            class="material-icons">arrow_drop_down</span></button>
+                    <div class="items itemsNone">
+                        <span><a href="">Sneakers</a></span>
+                        <span><a href="">Jewlry</a></span>
+                        <span><a href="">Clothes</a></span>
+                        <span><a href="">Brand</a></span>
+
+                    </div>
+
+
+                </div>
+
+                <div class="womenstuff">
+                    <button class="bbtn bbtn2 bbtnNone">Women <span
+                            class="material-icons">arrow_drop_down</span></button>
+                    <div class="items itemsNone">
+                        <span><a href="">Sneakers</a></span>
+                        <span><a href="">Jewlry</a></span>
+                        <span><a href="">Clothes</a></span>
+                        <span><a href="">Brand</a></span>
+
+                    </div>
+                </div>
+                <div class="brandstuff">
+                    <button class="bbtn bbtn3 bbtnNone">Brand <span
+                            class="material-icons">arrow_drop_down</span></button>
+                    <div class="items itemsNone">
+                        <span><a href="">Sneakers</a></span>
+                        <span><a href="">Jewlry</a></span>
+                        <span><a href="">Clothes</a></span>
+                        <span><a href="">Brand</a></span>
+                        <span><a href="">Bag</a></span>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div>
+            <button class="cart"><span class="material-icons">add_shopping_cart</span><sub
+                    class="cartNotification"></sub> </button>
+            <button class="setting"><span class="material-icons">settings</span></button>
+        </div>
+
+    </nav>
+    <section>
+        <h3>Your Cart</h3>
+        <div class="productExplanation">
+            <div>
+                <span>Product Details</span><br>
+            </div>
+            <div class="productPQT">
+                <div>
+                    <span> Price</span>
+                </div>
+                <div>
+                    <span>Ouantity</span>
+                </div>
+                <div>
+                    <span>Total</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="productbought">
+            <div class="product_details">
+                <div class="imgdiv">
+                    <div class="d-flex">
+                        <img src="images/299286e7da1646e48537ada300092d65_9366.webp" alt="" width="50%">
+                        <div class="ms-3">
+                            <h6>NIKE</h6>
+                            <P>lorem10</P>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="div">
+                    <div>
+
+                        <div>
+                            <span class="fw-bold"> 20300</span>
+                        </div>
+                    </div>
+                    <div class="add_reduce d-flex justify-content-center">
+                        <div>
+                            <button class="fw-bold">+</button>
+                            <span class="fw-bold">6</span>
+                            <button class="fw-bold">-</button>
+                        </div>
+
+
+                    </div>
+                    <div class="totalincrementNone">
+                        <div>
+                            <span class="fw-bold">4000</span>
+                        </div>
+
+                    </div>
+                    <div class="btnremoveOrder">
+                        <button>&times;</button><br>
+
+                    </div>
+                </div>
+            </div>
+            <div class="order-summary">
+                <div>
+                    <div class="ordersummaryt">
+                        <h5>Order Summary</h5>
+                    </div>
+                    <div class="summarytextdiv d-flex justify-content-between">
+                        <span class="summarytext">SubTotal</span>
+                        <span>2000</span>
+                    </div>
+                    <div class="summarytextdiv d-flex justify-content-between">
+                        <span class="summarytext">Delivery Fee</span>
+                        <span>1000</span>
+                    </div>
+                    <div class="summarytexttotal d-flex justify-content-between">
+                        <span class="summarytext">Total</span>
+                        <span>2000</span>
+                    </div>
+                    <div class="orderbtn d-flex justify-content-center">
+                        <button onclick="pay()">Pay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="signupback">
+
+    </div>
+    <div class="signup">
+        <div>
+            <div class="d-flex justify-content-center">
+                <div class="icon">
+                    <h1>Elux Mart</h1>
+                    <div class="on"></div>
+                </div>
+
+            </div>
+            <p>Sign In</p>
+            <form action="">
+                <div>
+                    <span class="material-icons">person_outline</span>
+                    <input type="text">
+
+                </div>
+                <div>
+                    <span class="material-icons">key</span>
+                    <input type="text">
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="cart.js"></script>
+</body>
+
+</html>

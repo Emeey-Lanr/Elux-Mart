@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <button class="navbtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="d-flex justify-content-center">
+                <div class="menstuff">
+                    <button class="bbtn bbtn1  bbtnNone">Men <span
+                            class="material-icons">arrow_drop_down</span></button>
+                    <div class="items itemsNone">
+                        <span><a href="">Sneakers</a></span>
+                        <span><a href="">Jewlry</a></span>
+                        <span><a href="">Clothes</a></span>
+                        <span><a href="">Brand</a></span>
+
+                    </div>
+
+
+                </div>
+
+                <div class="womenstuff">
+                    <button class="bbtn bbtn2 bbtnNone">Women <span
+                            class="material-icons">arrow_drop_down</span></button>
+                    <div class="items itemsNone">
+                        <span><a href="">Sneakers</a></span>
+                        <span><a href="">Jewlry</a></span>
+                        <span><a href="">Clothes</a></span>
+                        <span><a href="">Brand</a></span>
+
+                    </div>
+                </div>
+                <div class="brandstuff">
+                    <button class="bbtn bbtn3 bbtnNone">Brand <span
+                            class="material-icons">arrow_drop_down</span></button>
+                    <div class="items itemsNone">
+                        <span><a href="">Sneakers</a></span>
+                        <span><a href="">Jewlry</a></span>
+                        <span><a href="">Clothes</a></span>
+                        <span><a href="">Brand</a></span>
+                        <span><a href="">Bag</a></span>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="icon">
+            <h1 class="brandName">Elux Mart</h1>
+            <div class="on"></div>
+        </div>
+        <div>
+            <button class="cart"><span class="material-icons">add_shopping_cart</span><sub
+                    class="cartNotification">5</sub> </button>
+            <button class="setting"><span class="material-icons">settings</span></button>
+        </div>
+
+    </nav>
+    <div>
+        <div class="brand brand1 brandnone1">
+            <div class="brand1b d-flex justify-content-center align-items-center">
+
+                <div>
+                    <h5 class="brand">BRAND</h5>
+                    <div class="d-flex justify-content-center">
+                        <button>SHOP NOW</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>SNEAKERS</h2>
+        <div class="sneakers">
+            <div class="snk1">
+                <img src="images/BALF-MZ270_V1.webp" alt="">
+                <div>
+                    <h4>BALENCIAGA</h4>
+                    <P>Tropper Rubber Boot</P>
+                    <span>#390, 000</span>
+                    <div class="d-flex justify-content-center">
+                        <button
+                            onclick="buy('BALENCIAGA', 'Tropper Rubber Boot', 'images/BALF-MZ270_V1.webp', '390000')">Buy</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="snk2">
+                <img src="images/nike.webp" alt="">
+                <div>
+                    <h4>NIKE</h4>
+                    <P>Air Jordan 4 Retro </P>
+                    <span>#407,000</span>
+                    <div class="d-flex justify-content-center">
+                        <button onclick="buy('Nike', 'Air Jordan 4 Retro ','images/nike.webp', '407,000')">Buy</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="snk3">
+                <img src="images/bb (2).jpg" alt="">
+                <div>
+                    <h4>BALENCIAGA</h4>
+                    <P>Sole Recycled Knit</P>
+                    <span>#200,000</span>
+                    <div class="d-flex justify-content-center">
+                        <button
+                            onclick="buy('BALENCIAGA', 'Sole Recycled Knit','images/bb (2).jpg', '200000')">Buy</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="snk4">
+                <img src="images/bb (1).jpg" alt="">
+                <div>
+                    <h4>BB</h4>
+                    <P>Paris low Trainers</P>
+                    <span>#67,000</span>
+                    <div class="d-flex justify-content-center">
+                        <button onclick="buy('BB', 'Paris low Trainers', 'images/bb (1).jpg', '67000')">Buy</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="snk5">
+                <img src="images/jj.webp" alt="">
+                <div>
+                    <h4>NIKE</h4>
+                    <P>Air Jordan 1 High</P>
+                    <span>#350,000</span>
+                    <div class="d-flex justify-content-center">
+                        <button onclick="buy('NIKE', 'Air Jordan 1 High', 'images/jj.webp', '350000')">Buy</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="section1">
+        <div>BUY FROM US TODAY !</div>
+
+    </section>
+    <section class="section2">
+        <div class="group1">
+            <div class="">
+                <div class="d-flex justify-content-center">
+                    <img src="images/6_1_900x.webp" alt="" width="90%">
+                </div>
+                <div>
+                    <span></span><span></span><span></span><span></span>
+                </div>
+                <p>Top Notch Heels</p>
+                <div class="d-flex justify-content-center">
+                    <button>Buy Now</button>
+                </div>
+            </div>
+            <div>
+                <div class="d-flex justify-content-center">
+                    <img src="images/louis-vuitton-onthego-mm-bicolor-monogram-empreinte-leather-handbags--M45982_PM2_Front view.webp"
+                        alt="" width="90%">
+                </div>
+                <div>
+                    <span></span><span></span><span></span><span></span>
+                </div>
+                <p>Designer Bags</p>
+                <div class="d-flex justify-content-center">
+                    <button>Buy Now</button>
+                </div>
+            </div>
+            <div>
+                <div class="d-flex justify-content-center">
+                    <img src="images/uu.webp" alt="" width="90%">
+                </div>
+                <div>
+                    <span></span><span></span><span></span><span></span>
+                </div>
+                <p>Sparkling Jewelry</p>
+                <div class="d-flex justify-content-center">
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <script src="demo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,548 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    background: linear-gradient(to bottom, rgba(226, 226, 226, 0.477), rgb(255, 255, 255));
+
+}
+
+.navbtn {
+    border: none;
+    background: transparent;
+    display: none;
+}
+
+.navbtn>span {
+    width: 27px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #4bf145;
+    display: block;
+    margin-bottom: 3px;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+.icon {
+    display: flex;
+    align-items: baseline;
+    animation: index 1 8s running normal;
+
+}
+
+
+.on {
+    background-color: #4bf145;
+    width: 10px;
+    height: 10px;
+    margin-left: 15px;
+
+}
+
+.bbtn span:hover {
+    transform: rotate(-95deg);
+}
+
+.bbtn {
+    border: none;
+    background: transparent;
+    padding: 0 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.items {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    border-top: 1px solid #4bf145;
+    background: linear-gradient(to top, rgb(226, 226, 226), rgb(255, 255, 255));
+    display: none;
+}
+
+.items>span {
+    margin-top: 20px;
+    display: block;
+    margin-bottom: 30px;
+    margin-left: 40px;
+}
+
+.items>span a {
+    text-decoration: none;
+    /* color: #4bf145; */
+    color: #383838;
+    font-weight: 500;
+}
+
+.items>span a:hover {
+    transition: 0.5s all ease-out;
+    color: #4bf145;
+    transform: translateX(20px);
+    font-size: 1.2rem;
+}
+
+.items:hover {
+    display: block;
+}
+
+
+.femalestuff>button span:hover {
+    transform: rotate(95deg);
+}
+
+.bbtn1:hover~.items {
+    display: block;
+    position: fixed;
+}
+
+.bbtn2:hover~.items {
+    display: block;
+    position: fixed;
+}
+
+.bbtn3:hover~.items {
+    display: block;
+    position: fixed;
+}
+
+.cart {
+    border: none;
+    background: transparent;
+}
+
+.cart .cartNotification {
+    padding: 2px 4px;
+    background-color: #4bf145;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.5rem;
+}
+
+.setting {
+    border: none;
+    background: transparent;
+}
+
+.setting span {
+    color: #3f583e;
+}
+
+
+.brand1 {
+    width: 100%;
+    height: 80vh;
+    background: url(images/pexels-photo-12194934.jpeg);
+    background-position: center;
+    background-size: 600px;
+    animation: bbrand infinite 8s running normal;
+}
+
+@keyframes bbrand {
+    0% {
+        background-image: url(images/balenciaga.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    40% {
+        background-image: url(images/versace.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    80% {
+        background-image: url(images/balenciaga.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    100% {
+
+        background: url(images/pexels-photo-12194934.jpeg);
+        background-position: center;
+        background-size: 600px;
+    }
+
+
+}
+
+
+
+.brand1b {
+    width: 100%;
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 0.761);
+}
+
+.brand1b>div>h5 {
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.brand1b>div button {
+    margin-top: 60px;
+    padding: 15px 20px;
+    border: none;
+    background-color: #4bf145;
+    color: white;
+    font-weight: 500;
+}
+
+h2 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.sneakers {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+
+}
+
+.sneakers::-webkit-scrollbar {
+    height: 6px;
+}
+
+.sneakers::-webkit-scrollbar-thumb {
+    color: red;
+
+}
+
+
+
+.sneakers>.snk1 {
+    height: 600px;
+    text-align: center;
+}
+
+
+.sneakers>.snk1 img {
+    width: 300px;
+    height: 400px;
+    margin-left: 20px;
+}
+
+.sneakers>div img:hover {
+    transition: 2s all ease-out;
+    transform: translateX(30px);
+}
+
+.sneakers>.snk2 {
+    height: 600px;
+    text-align: center;
+}
+
+.sneakers>.snk1 button {
+    border: none;
+    background-color: #4bf145;
+    padding: 10px 60px;
+    color: white;
+}
+
+.sneakers>.snk2 img {
+    width: 400px;
+
+}
+
+.sneakers>.snk2 button {
+    border: none;
+    background-color: #4bf145;
+    padding: 10px 60px;
+    color: white;
+}
+
+.sneakers>.snk3 {
+    text-align: center;
+    height: 600px;
+}
+
+.sneakers>.snk3 img {
+    width: 400px;
+}
+
+.sneakers>.snk3 button {
+    border: none;
+    background-color: #4bf145;
+    padding: 10px 60px;
+    color: white;
+}
+
+.sneakers>.snk4 {
+    text-align: center;
+}
+
+.sneakers>.snk4 img {
+    width: 400px;
+}
+
+.sneakers>.snk4 button {
+    border: none;
+    background-color: #4bf145;
+    padding: 10px 60px;
+    color: white;
+}
+
+.sneakers>.snk5 {
+    text-align: center;
+}
+
+.sneakers>.snk5 img {
+    width: 400px;
+}
+
+.sneakers>.snk5 button {
+    border: none;
+    background-color: #4bf145;
+    padding: 10px 60px;
+    color: white;
+}
+
+.section1 {
+    width: 100%;
+    height: 70vh;
+    background: url(images/kk.png);
+    background-position: center;
+    background-size: 40%;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.section1>div {
+
+    font-size: 3rem;
+    font-weight: 600;
+    animation: buy infinite 6s running normal;
+    color: #4bf145;
+
+}
+
+
+@keyframes buy {
+    0% {
+        font-size: 2rem;
+    }
+
+    40% {
+        font-size: 3rem;
+    }
+
+
+}
+
+.group1 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20%;
+    grid-gap: 40px;
+    justify-content: center;
+}
+
+.group1>div {
+    border: 1px solid #4bf145;
+    border-radius: 2px;
+    padding-top: 6px;
+    padding-bottom: 10px;
+}
+
+.group1>div img {
+    height: 350px;
+    object-fit: cover;
+}
+
+.group1>div p {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.group1>div>div>button {
+    border: none;
+    width: 90%;
+    padding: 10px 0;
+    background-color: #4bf145;
+    color: white;
+}
+
+.group2 {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-gap: 40px;
+    justify-content: center;
+}
+
+.group2>div {
+    border: 1px solid #4bf145;
+    height: 60vh;
+}
+
+
+@media screen and (max-width:1130px) {
+    .group1 {
+        width: 100%;
+        grid-template-columns: 24% 24% 24%;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    .bbtnNone {
+        display: none;
+    }
+
+    .itemsNone {
+        display: none;
+    }
+
+    .navbtn {
+        display: block;
+    }
+
+    .group1 {
+        width: 100%;
+        grid-template-columns: 30% 30% 30%;
+        box-sizing: border-box;
+    }
+
+    .section1 {
+        background-size: 60%;
+        box-sizing: border-box;
+
+    }
+
+    .section1>div {
+
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+
+    @keyframes buy {
+        0% {
+            font-size: 1.5rem;
+        }
+
+        40% {
+            font-size: 2rem;
+        }
+
+
+    }
+
+    .group1>div p {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+
+
+}
+
+@media screen and (max-width:700px) {
+    body {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .group1 {
+        grid-template-columns: 80%;
+        box-sizing: border-box;
+    }
+
+    .sneakers>.snk1 {
+        height: 600px;
+        text-align: center;
+    }
+
+
+    .sneakers>.snk1 img {
+        width: 200px;
+        height: 300px;
+    }
+
+
+    .sneakers>.snk2 {
+        height: 600px;
+        text-align: center;
+    }
+
+
+
+    .sneakers>.snk2 img {
+        width: 300px;
+
+    }
+
+
+
+    .sneakers>.snk3 {
+        text-align: center;
+        height: 600px;
+    }
+
+    .sneakers>.snk3 img {
+        width: 400px;
+    }
+
+
+
+
+    .sneakers>.snk4 img {
+        width: 400px;
+    }
+
+
+
+    .sneakers>.snk5 img {
+        width: 300px;
+    }
+
+
+}
+
+@media screen and (max-width:530px) {
+    .brandName {
+        font-size: 1.3rem !important;
+    }
+
+    .brand {
+        font-size: 3rem !important;
+    }
+
+    .brand1b>div button {
+
+        padding: 0;
+        padding: 12px 12px;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+}
