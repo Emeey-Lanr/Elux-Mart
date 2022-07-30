@@ -65,7 +65,7 @@ h1 {
 }
 
 .items {
-    position: absolute;
+    position: fixed;
     top: 70px;
     left: 0;
     width: 100%;
@@ -101,11 +101,28 @@ h1 {
 }
 
 
+.menstuff {
+    position: relative;
+
+}
+
+.menstuff:hover {
+    position: relative;
+
+}
+
+.menstuff:hover .items {
+    width: 100%;
+    display: block;
+    position: fixed;
+
+}
+
 .femalestuff>button span:hover {
     transform: rotate(95deg);
 }
 
-.bbtn1:hover~.items {
+/* .bbtn1:hover~.items {
     display: block;
     position: fixed;
 }
@@ -118,7 +135,7 @@ h1 {
 .bbtn3:hover~.items {
     display: block;
     position: fixed;
-}
+} */
 
 .cart {
     border: none;

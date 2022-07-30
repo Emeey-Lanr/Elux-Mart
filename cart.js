@@ -20,7 +20,7 @@ const paymentSlipReceipt = () => {
                                     </div>
                                     <div class="summarytextdiv d-flex justify-content-between">
                                         <span class="summarytext">SubTotal</span>
-                                        <span>${sum}</span>
+                                        <span>₦${sum}</span>
                                     </div>
                                     <div class="summarytextdiv d-flex justify-content-between">
                                         <span class="summarytext">Delivery Fee</span>
@@ -28,7 +28,7 @@ const paymentSlipReceipt = () => {
                                     </div>
                                     <div class="summarytexttotal d-flex justify-content-between">
                                         <span class="summarytext">Total</span>
-                                        <span>${z}</span>
+                                        <span>₦${z}</span>
                                     </div>
                                     <div class="orderbtn d-flex justify-content-center">
                                         <button onclick="pay()">Pay</button>
@@ -49,7 +49,7 @@ const cartListObject = () => {
                                   <div class="d-flex">
                                      <img src="${ci.brandImgUrl}" alt="" width="50%">
                                     <div class="ms-3">
-                                       <h6>${ci.brandName}</h6>
+                                       <h6 class="h6">${ci.brandName}</h6>
                                         <p>${ci.brandTitle}</p>
                                     </div>
 
@@ -61,13 +61,13 @@ const cartListObject = () => {
                                 <div>
 
                                     <div>
-                                        <span class="fw-bold">${ci.brandPrice}</span>
+                                        <span class="fw-bold">₦${ci.brandPrice}</span>
                                     </div>
                                 </div>
                                  <div class="add_reduce d-flex justify-content-center">
                                      <div>
                                          <button class="fw-bold" onclick="addToQuatity(${cd})">+</button>
-                                         <span class="fw-bold" id="amountOfProduct onclick="""></span>
+                                         <span class="fw-bold amountproduct" id="amountOfProduct" ></span>
                                          <button class="fw-bold" onclick="reduceQuantity(${cd})">-</button>
                                      </div>
 
@@ -132,5 +132,14 @@ const deleteProduct = (del) => {
 
         }
     })
+
+}
+
+let count = 0;
+let count2 = 0
+const productAmount = document.querySelectorAll('.amountproduct')
+const addToQuatity = (add) => {
+
+
 
 }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signUp.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body onload="acceptNewUser()">
+
+    <section>
+        <div action="" id="form">
+            <div>
+                <div class="icon justify-content-center">
+                    <h1 class="brandName">Elux Mart</h1>
+                    <div class="on"></div>
+                </div>
+                <div class="inoutbox">
+                    <span class="material-icons">person_outline</span>
+                    <input type="text" placeholder="FirstName" id="firstName">
+                </div>
+                <div class="inoutbox">
+                    <span class="material-icons">person_outline</span>
+                    <input type="text" placeholder="lastname" id="lastName">
+                </div>
+                <p class="valid" id="emailValidation"></p>
+                <div class="inoutbox inoutboxemail">
+                    <span class="material-icons">email</span>
+                    <input type="email" placeholder="Email" id="eMail">
+                </div>
+                <p class="valid" id="phonenumberValidation"></p>
+                <div class="inoutbox inoutboxphonenumber">
+                    <span class="material-icons">phone</span>
+                    <input type="text" placeholder="Phonenumber" id="phoneNumber">
+                </div>
+
+                <p class="valid" id="passwordValidation"></p>
+                <div class="inoutbox inoutboxpassword">
+                    <span class="material-icons">lock</span>
+                    <input type="text" placeholder="Password" id="passWord">
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <button onclick="signUp()">Sign Up</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <script src="signUp.js"></script>
+</body>
+
+</html>

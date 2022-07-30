@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+section {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, rgba(226, 226, 226, 0.611), rgb(255, 255, 255));
+
+}
+
+#form {
+    width: 30%;
+    padding: 60px 0;
+    background-color: rgba(255, 255, 255, 0.373);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+
+.icon {
+    display: flex;
+    align-items: baseline;
+    animation: index 1 8s running normal;
+
+}
+
+
+.on {
+    background-color: #4bf145;
+    width: 10px;
+    height: 10px;
+    margin-left: 15px;
+
+}
+
+section #form>div {
+    width: 100%;
+
+}
+
+section #form>div .inoutbox {
+    border: 1px solid rgb(224, 224, 224);
+    width: 90%;
+    padding: 5px 0;
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 5px;
+    border-radius: 2px;
+
+
+}
+
+section #form>div .inoutbox input {
+    border: none;
+    background: none;
+
+    width: 90%;
+    padding-left: 10px;
+
+    padding-top: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+section #form>div button {
+    border: none;
+    background-color: #4bf145;
+    width: 90%;
+    padding: 10px 0;
+    color: white;
+    border-radius: 5px;
+
+}
+
+section #form>div button:hover {
+    transition: 1s all ease-out;
+    transform: translateY(10px);
+}
+
+.valid {
+    width: 90%;
+    margin: auto;
+    font-size: 0.9rem;
+    padding-bottom: 3px;
+}
+
+@media screen and (max-width:1000px) {
+    #form {
+        width: 50%;
+        height: 80%;
+
+    }
+}
+
+@media screen and (max-width:500px) {
+    #form {
+        width: 90%;
+        height: 80%;
+
+    }
+}
