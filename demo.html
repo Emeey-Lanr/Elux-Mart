@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="demo.css">
     <link rel="stylesheet" href="bootstrap.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -62,6 +63,9 @@
 
 
             </div>
+            <button class="search-btn d-flex justify-content-center align-items-center">
+                <span class="material-icons">search</span>
+            </button>
         </div>
         <div class="icon">
             <h1 class="brandName">Elux Mart</h1>
@@ -90,120 +94,205 @@
             </div>
         </div>
     </div>
-    <div>
-        <h2>SNEAKERS</h2>
-        <div class="sneakers">
-            <div class="snk1">
-                <img src="images/BALF-MZ270_V1.webp" alt="">
-                <div>
-                    <h4>BALENCIAGA</h4>
-                    <P>Tropper Rubber Boot</P>
-                    <span>#390, 000</span>
-                    <div class="d-flex justify-content-center">
-                        <button
-                            onclick="buy('BALENCIAGA', 'Tropper Rubber Boot', 'images/BALF-MZ270_V1.webp', '390000')">Buy</button>
+
+    <!-- =========================== -->
+    <div class="product mt-5">
+        <div class="row w-100 justify-content-center">
+            <div class="col-lg-4 col-lg-4 col-sm-4 women">
+                <div class="d-flex justify-content-center align-items-center">
+                    <div>
+                        <p>Women</p>
+                        <div class="d-flex justify-content-center">
+                            <button>Explore</button>
+                        </div>
                     </div>
 
                 </div>
             </div>
-            <div class="snk2">
-                <img src="images/nike.webp" alt="">
-                <div>
-                    <h4>NIKE</h4>
-                    <P>Air Jordan 4 Retro </P>
-                    <span>#407,000</span>
-                    <div class="d-flex justify-content-center">
-                        <button onclick="buy('Nike', 'Air Jordan 4 Retro ','images/nike.webp', '407000')">Buy</button>
+            <div class="col-lg-4 col-lg-4 col-sm-4 men">
+                <div class="d-flex justify-content-center align-items-center">
+                    <div>
+                        <p>Men</p>
+                        <div class="d-flex justify-content-center">
+                            <button>Explore</button>
+                        </div>
+
                     </div>
 
                 </div>
             </div>
-            <div class="snk3">
-                <img src="images/bb (2).jpg" alt="">
-                <div>
-                    <h4>BALENCIAGA</h4>
-                    <P>Sole Recycled Knit</P>
-                    <span>#200,000</span>
-                    <div class="d-flex justify-content-center">
-                        <button
-                            onclick="buy('BALENCIAGA', 'Sole Recycled Knit','images/bb (2).jpg', '200000')">Buy</button>
-                    </div>
 
+
+        </div>
+
+    </div>
+
+    <!-- ======================== -->
+
+    <div class="sneakers mt-5 w-100">
+        <div class="row w-100">
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <img src="images/addidas.webp" alt="" class="w-100">
+                <div class="d-flex justify-content-between fw-bold fs-6 py-3">
+                    <p>Forum Exhibit</p>
+                    <p>₦50,000</p>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button onclick="changeicon()"><span class="material-icons"
+                            id="like">favorite_border</span></button>
+
+                    <button onclick="buy('Addidas','Forum Exhibit','images/addidas.webp', '50000', '50000')"
+                        id="btn">Buy</button>
                 </div>
             </div>
-            <div class="snk4">
-                <img src="images/bb (1).jpg" alt="">
-                <div>
-                    <h4>BB</h4>
-                    <P>Paris low Trainers</P>
-                    <span>#67,000</span>
-                    <div class="d-flex justify-content-center">
-                        <button onclick="buy('BB', 'Paris low Trainers', 'images/bb (1).jpg', '67000')">Buy</button>
-                    </div>
-
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <img src="images/hhh.webp" alt="" class="w-100">
+                <div class="d-flex justify-content-between fw-bold fs-6 py-3">
+                    <p>Trea young 1</p>
+                    <p>₦68,00</p>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button onclick="likeiconbtn2()"><span class="material-icons"
+                            id="like2">favorite_border</span></button>
+                    <button onclick="buy('Addidas', 'Trea young 1', 'images/hhh.webp', '68000', '68000')"
+                        id="btn">Buy</button>
                 </div>
             </div>
-            <div class="snk5">
-                <img src="images/jj.webp" alt="">
-                <div>
-                    <h4>NIKE</h4>
-                    <P>Air Jordan 1 High</P>
-                    <span>#350,000</span>
-                    <div class="d-flex justify-content-center">
-                        <button onclick="buy('NIKE', 'Air Jordan 1 High', 'images/jj.webp', '350000')">Buy</button>
-                    </div>
-
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <img src="images/ek.webp" alt="" class="w-100">
+                <div class="d-flex justify-content-between fw-bold fs-6 py-3">
+                    <p>Air Jordan 1</p>
+                    <p>₦500,000</p>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button onclick="likeiconbtn3()"><span class="material-icons"
+                            id="like3">favorite_border</span></button>
+                    <button onclick="buy('Nike','Air Jordan 1', 'images/ek.webp', '5500000', '5500000')"
+                        id="btn">Buy</button>
                 </div>
             </div>
+
         </div>
     </div>
-    <section class="section1">
-        <div>BUY FROM US TODAY !</div>
+    <hr>
+    <section class="section2 w-100">
+        <div class="row w-100 ">
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <img src="images/bag.webp" alt="" class="w-100">
+                <div class="d-flex justify-content-between fw-bold fs-6 py-3">
+                    <p>La greca Tote Bag</p>
+                    <p>₦777,700</p>
+                </div>
+                <div>
+                    <button onclick="likeiconx()"><span class="material-icons"
+                            id="likex">favorite_border</span></button>
 
+                    <button
+                        onclick="buy('Versace', 'La greca Tote Bag', 'images/bag.webp', '777700', '777700')">Purchase</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <img src="images/kk.webp" alt="" class="w-100">
+                <div class="d-flex justify-content-between fw-bold fs-6 py-3">
+                    <p>Silver Barogque Denim Shirt</p>
+                    <p>₦600,000</p>
+                </div>
+                <div>
+                    <button onclick="likeiconxx()"><span class="material-icons"
+                            id="likexx">favorite_border</span></button>
+                    <button
+                        onclick="buy('Versace','Silver Barogque Denim Shirt', 'images/kk.webp', '600000', '600000')">Purchase</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <img src="images/rebel.webp" alt="" class="w-100">
+                <div class="d-flex justify-content-between fw-bold fs-6 py-3">
+                    <p>Royal Rebellion Jeans</p>
+                    <p>₦556,000</p>
+                </div>
+                <div>
+                    <button onclick="likeiconxxx()"><span class="material-icons"
+                            id="likexxx">favorite_border</span></button>
+                    <button
+                        onclick="buy('Versace', 'Royal Rebellion Jeans', 'images/rebel.webp', '556000', '556000')">Purchase</button>
+                </div>
+            </div>
+
+
+        </div>
     </section>
-    <section class="section2">
-        <div class="group1">
-            <div class="">
-                <div class="d-flex justify-content-center">
-                    <img src="images/6_1_900x.webp" alt="" width="90%">
-                </div>
-                <div>
-                    <span></span><span></span><span></span><span></span>
-                </div>
-                <p>Top Notch Heels</p>
-                <div class="d-flex justify-content-center">
-                    <button>Buy Now</button>
+    <section class="search">
+        <div class="d-flex justify-content-center">
+            <div class="serch d-flex justify-content-center">
+                <div class="searchhouse d-flex align-items-center">
+                    <input type="text" id="searchInput">
+                    <button class="d-flex justify-content-center align-items-center" onclick="showDetails()">
+                        <span class="material-icons">search</span>
+                    </button>
                 </div>
             </div>
-            <div>
-                <div class="d-flex justify-content-center">
-                    <img src="images/louis-vuitton-onthego-mm-bicolor-monogram-empreinte-leather-handbags--M45982_PM2_Front view.webp"
-                        alt="" width="90%">
-                </div>
-                <div>
-                    <span></span><span></span><span></span><span></span>
-                </div>
-                <p>Designer Bags</p>
-                <div class="d-flex justify-content-center">
-                    <button>Buy Now</button>
-                </div>
-            </div>
-            <div>
-                <div class="d-flex justify-content-center">
-                    <img src="images/uu.webp" alt="" width="90%">
-                </div>
-                <div>
-                    <span></span><span></span><span></span><span></span>
-                </div>
-                <p>Sparkling Jewelry</p>
-                <div class="d-flex justify-content-center">
-                    <button>Buy Now</button>
-                </div>
-            </div>
+
+
         </div>
 
-
     </section>
+
+    <footer>
+        <div class="footerContent">
+            <div class="more">
+                <p>More from Us</p>
+                <div>
+                    <span><a href="">Become An Admin</a> </span>
+                    <span><a href="">About Us</a> </span>
+                    <span><a href="">Terms & Condition</a></span>
+
+                </div>
+            </div>
+            <div class="contact">
+                <p>Contact Us</p>
+                <div>
+                    <div>
+                        <p>Phone Number</p>
+                        <ul>
+                            <li><a href="">+2348152304412</a> </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p> Whatsapp</p>
+                        <ul>
+                            <li><a href="">+2348152304412</a> </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p>Email</p>
+                        <ul>
+                            <li><a href="">emeeylanr04@gmail</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <a href=""><i class="fa fa-instagram"></i></a>
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <div>
+                <p>Social Link</p>
+                <ul>
+                    <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-center">
+            <p>Emmanuel Luxury Market ©2022</p>
+        </div>
+    </footer>
+
 
     <script src="demo.js"></script>
 </body>

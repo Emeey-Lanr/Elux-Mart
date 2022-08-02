@@ -4,7 +4,7 @@ let cartList = JSON.parse(localStorage.cartOrder)
 const productDetails = document.querySelector('.product_details');
 const paymentSlip = document.getElementById('orderSummary');
 document.querySelector('.cartNotification').innerHTML = cartList.length;
-const totalprice = []
+let totalprice = []
 let sum = 0
 let deliveryFee = 1000
 //a fuction that sums the total amount of the price of the product bought
@@ -12,7 +12,6 @@ const paymentSlipReceipt = () => {
     for (let i = 0; i < cartList.length; i++) {
         totalprice.push(cartList[i].brandPrice)
         sum += Number(totalprice[i])
-        console.log(sum)
         let z = sum + deliveryFee
         paymentSlip.innerHTML = `<div>
                                     <div class="ordersummaryt">
@@ -61,14 +60,14 @@ const cartListObject = () => {
                                 <div>
 
                                     <div>
-                                        <span class="fw-bold">₦${ci.brandPrice}</span>
+                                        <span class="fw-bold" id="yes">₦${ci.brandPrice}</span>
                                     </div>
                                 </div>
                                  <div class="add_reduce d-flex justify-content-center">
                                      <div>
-                                         <button class="fw-bold" onclick="addToQuatity(${cd})">+</button>
-                                         <span class="fw-bold amountproduct" id="amountOfProduct" ></span>
-                                         <button class="fw-bold" onclick="reduceQuantity(${cd})">-</button>
+                                         <button class="fw-bold" id="add" onclick="addToQuatity(${cd})">+</button>
+                                         <input type="text" class="fw-bold amountproduct" id="amountOfProduct" ></input>
+                                         <button class="fw-bold" id="reduce" onclick="reduceQuantity(${cd})">-</button>
                                      </div>
 
 
@@ -104,18 +103,18 @@ const deleteProduct = (del) => {
     //checked for  the index of the price if it's equal to the index passed in the delete button 
     //then remove the number from thte total price
     //i then splice the array of the totalprice which then return a new array and diffent total
-    let removecart = totalprice.filter((ti, td) => {
-        if (del == td) {
-            sum = sum - Number(totalprice[td])
+    for (let i = 0; i < totalprice.length; i++) {
+        if (del == i) {
+            sum = sum - Number(totalprice[i])
             let total = sum + deliveryFee
-            totalprice.splice(td, 1)
+            totalprice.splice(i, 1)
             paymentSlip.innerHTML = `<div>
                                         <div class="ordersummaryt">
                                             <h5>Order Summary</h5>
                                         </div>
                                         <div class="summarytextdiv d-flex justify-content-between">
                                             <span class="summarytext">SubTotal</span>
-                                            <span>${sum}</span>
+                                            <span id='summ'>${sum}</span>
                                         </div>
                                         <div class="summarytextdiv d-flex justify-content-between">
                                             <span class="summarytext">Delivery Fee</span>
@@ -131,15 +130,115 @@ const deleteProduct = (del) => {
                                      </div>`
 
         }
-    })
+    }
 
 }
 
-let count = 0;
-let count2 = 0
+
 const productAmount = document.querySelectorAll('.amountproduct')
+const inputQ = document.querySelectorAll('#amountOfProduct')
+const amount = document.querySelectorAll('#yes')
+const summ = document.getElementById('sum')
+let totalsum = 0
+//Amount Addition, it adds to the existing amount if increased
 const addToQuatity = (add) => {
+    cartList.map((ti, li) => {
+        if (add == li) {
+            for (let i = 0; i < inputQ.length; i++) {
+                if (add == i) {
+                    var inputQuantityInput = inputQ[i].value
+                    var inputQuantity = Number(inputQuantityInput) + 1
+                    let brandOrginp = Number(ti.brandOriginalPrice)
+                    inputQ[i].value = inputQuantity
+                    if (inputQ[i].value > 1) {
+                        let m = Number(ti.brandPrice) + brandOrginp
+                        let z = amount[i].innerHTML = `₦${m}`
+                        ti.brandQuantity = inputQuantity
+                        ti.brandPrice = m;
+                        localStorage.cartOrder = JSON.stringify(cartList)
+                        sum = sum + Number(cartList[i].brandOriginalPrice);
+                        let total = sum + 1000;
+                        paymentSlip.innerHTML = `<div>
+                                                    <div class="ordersummaryt">
+                                                        <h5>Order Summary</h5>
+                                                    </div>
+                                                    <div class="summarytextdiv d-flex justify-content-between">
+                                                        <span class="summarytext">SubTotal</span>
+                                                        <span id='summ'>${sum}</span>
+                                                    </div>
+                                                    <div class="summarytextdiv d-flex justify-content-between">
+                                                        <span class="summarytext">Delivery Fee</span>
+                                                        <span>1000</span>
+                                                    </div>
+                                                    <div class="summarytexttotal d-flex justify-content-between">
+                                                        <span class="summarytext">Total</span>
+                                                        <span>${total}</span>
+                                                    </div>
+                                                    <div class="orderbtn d-flex justify-content-center">
+                                                        <button onclick="pay()">Pay</button>
+                                                    </div>
+                                                </div>`
+
+                    }
+                }
+            }
+        }
+    })
 
 
+}
 
+//reduces the amount
+const reduceQuantity = (reduce) => {
+    cartList.map((ci, cd) => {
+        if (reduce == cd) {
+            for (let i = 0; i < inputQ.length; i++) {
+                if (reduce == i) {
+
+
+                    if (inputQ[i].value > 1) {
+                        var inputQuantityinput = inputQ[i].value;
+                        var inputQuantity = Number(inputQuantityinput) - 1;
+                        inputQ[i].value = inputQuantity
+                        let brandOrginp = Number(ci.brandOriginalPrice)
+                        let brandp = Number(ci.brandPrice)
+                        let m = brandp - brandOrginp
+                        ci.brandPrice = m
+                        localStorage.cartOrder = JSON.stringify(cartList);
+                        // console.log(ci.brandOriginalPrice)
+                        sum = sum - Number(ci.brandOriginalPrice)
+                        console.log(sum)
+                        amount[i].innerHTML = `₦${ci.brandPrice}`
+                        cartList.map((li, ld) => {
+                            console.log(sum)
+                            let total = sum + 1000;
+                            paymentSlip.innerHTML = `<div>
+                                                        <div class="ordersummaryt">
+                                                            <h5>Order Summary</h5>
+                                                        </div>
+                                                        <div class="summarytextdiv d-flex justify-content-between">
+                                                            <span class="summarytext">SubTotal</span>
+                                                            <span id='summ'>${sum}</span>
+                                                        </div>
+                                                        <div class="summarytextdiv d-flex justify-content-between">
+                                                            <span class="summarytext">Delivery Fee</span>
+                                                            <span>1000</span>
+                                                        </div>
+                                                        <div class="summarytexttotal d-flex justify-content-between">
+                                                            <span class="summarytext">Total</span>
+                                                            <span>${total}</span>
+                                                        </div>
+                                                        <div class="orderbtn d-flex justify-content-center">
+                                                            <button onclick="pay()">Pay</button>
+                                                        </div>
+                                                    </div>`
+
+                        })
+
+
+                    }
+                }
+            }
+        }
+    })
 }

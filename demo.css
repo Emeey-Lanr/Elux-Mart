@@ -65,10 +65,10 @@ h1 {
 }
 
 .items {
-    position: fixed;
-    top: 70px;
+    position: absolute;
+    /* top: 70px; */
     left: 0;
-    width: 100%;
+    width: 500px;
     height: 40vh;
     border-top: 1px solid #4bf145;
     background: linear-gradient(to top, rgb(226, 226, 226), rgb(255, 255, 255));
@@ -112,14 +112,26 @@ h1 {
 }
 
 .menstuff:hover .items {
-    width: 100%;
+    width: 500px;
     display: block;
-    position: fixed;
+    position: absolute;
 
 }
 
 .femalestuff>button span:hover {
     transform: rotate(95deg);
+}
+
+.womenstuff:hover .items {
+    width: 500px;
+    display: block;
+    position: absolute;
+}
+
+.brandstuff:hover .items {
+    width: 500px;
+    display: block;
+    position: absolute;
 }
 
 /* .bbtn1:hover~.items {
@@ -136,6 +148,11 @@ h1 {
     display: block;
     position: fixed;
 } */
+.search-btn {
+    border: none;
+    background: none;
+    color: #4bf145;
+}
 
 .cart {
     border: none;
@@ -229,195 +246,185 @@ h2 {
 
 .sneakers {
     width: 100%;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    overflow-y: hidden;
-    overflow-x: auto;
-    white-space: nowrap;
-
 }
 
-.sneakers::-webkit-scrollbar {
-    height: 6px;
+.sneakers .row {
+    justify-content: space-evenly;
 }
 
-.sneakers::-webkit-scrollbar-thumb {
-    color: red;
+.sneakers .row img {
 
-}
-
-
-
-.sneakers>.snk1 {
-    height: 600px;
-    text-align: center;
-}
-
-
-.sneakers>.snk1 img {
-    width: 300px;
-    height: 400px;
-    margin-left: 20px;
-}
-
-.sneakers>div img:hover {
-    transition: 2s all ease-out;
-    transform: translateX(30px);
-}
-
-.sneakers>.snk2 {
-    height: 600px;
-    text-align: center;
-}
-
-.sneakers>.snk1 button {
-    border: none;
-    background-color: #4bf145;
-    padding: 10px 60px;
-    color: white;
-}
-
-.sneakers>.snk2 img {
-    width: 400px;
-
-}
-
-.sneakers>.snk2 button {
-    border: none;
-    background-color: #4bf145;
-    padding: 10px 60px;
-    color: white;
-}
-
-.sneakers>.snk3 {
-    text-align: center;
-    height: 600px;
-}
-
-.sneakers>.snk3 img {
-    width: 400px;
-}
-
-.sneakers>.snk3 button {
-    border: none;
-    background-color: #4bf145;
-    padding: 10px 60px;
-    color: white;
-}
-
-.sneakers>.snk4 {
-    text-align: center;
-}
-
-.sneakers>.snk4 img {
-    width: 400px;
-}
-
-.sneakers>.snk4 button {
-    border: none;
-    background-color: #4bf145;
-    padding: 10px 60px;
-    color: white;
-}
-
-.sneakers>.snk5 {
-    text-align: center;
-}
-
-.sneakers>.snk5 img {
-    width: 400px;
-}
-
-.sneakers>.snk5 button {
-    border: none;
-    background-color: #4bf145;
-    padding: 10px 60px;
-    color: white;
-}
-
-.section1 {
-    width: 100%;
-    height: 70vh;
-    background: url(images/kk.png);
-    background-position: center;
-    background-size: 40%;
-    background-position-y: top;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-
-}
-
-.section1>div {
-
-    font-size: 3rem;
-    font-weight: 600;
-    animation: buy infinite 6s running normal;
-    color: #4bf145;
-
-}
-
-
-@keyframes buy {
-    0% {
-        font-size: 2rem;
-    }
-
-    40% {
-        font-size: 3rem;
-    }
-
-
-}
-
-.group1 {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 20% 20% 20%;
-    grid-gap: 40px;
-    justify-content: center;
-}
-
-.group1>div {
-    border: 1px solid #4bf145;
-    border-radius: 2px;
-    padding-top: 6px;
-    padding-bottom: 10px;
-}
-
-.group1>div img {
-    height: 350px;
     object-fit: cover;
+    border-radius: 5px;
 }
 
-.group1>div p {
+.sneakers .row>div button {
+    display: block;
+    border: none;
+    background: none;
+}
+
+.product {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.product .row>.women {
+    background: url(images/WOM.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+}
+
+.product .row>.women>div {
+    background: rgba(0, 0, 0, 0.658);
+    width: 100%;
+    height: 50vh;
+
+}
+
+.product .row>.men {
+    background: url(images/ASSK.webp);
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+}
+
+.product .row>.men>div {
+    background: rgba(0, 0, 0, 0.658);
+    width: 100%;
+    height: 50vh;
+
+}
+
+.product p {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 2rem;
+    color: white;
     font-weight: bold;
 }
 
-.group1>div>div>button {
+.product button {
     border: none;
-    width: 90%;
-    padding: 10px 0;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+}
+
+
+
+.section2 {
+    width: 100%;
+}
+
+.section2 .row {
+    justify-content: space-evenly;
+}
+
+.section2 .row img {
+    height: 50vh;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.section2 .row>div button {
+    display: block;
+    border: none;
+    background: none;
+}
+
+.search {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.486);
+    animation: yy 1 6s running forwards;
+    padding-top: 60px;
+}
+
+.search input {
+    border: none;
+    width: 100%;
+
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.search button {
+    border: none;
+    background: none;
+    padding: 10px 20px;
     background-color: #4bf145;
     color: white;
+    border-radius: 0 5px 5px 0;
 }
 
-.group2 {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
-    grid-gap: 40px;
-    justify-content: center;
+.search>.d-flex>.serch {
+    width: 30%;
+    background-color: white;
+    padding: 40px 0;
+
 }
 
-.group2>div {
-    border: 1px solid #4bf145;
-    height: 60vh;
+.searchhouse {
+    border: 1px solid #d1d1d1a9;
+    border-right: none;
+    width: 70%;
+    border-radius: 10px;
+
 }
 
+footer {
+    margin-top: 90px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(226, 226, 226, 0.477), rgb(255, 255, 255));
+}
+
+footer .footerContent {
+    padding-top: 30px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .more>p {
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+footer .more>div span {
+    display: block;
+    line-height: 4;
+}
+
+footer .more>div span a {
+    color: #383838;
+    text-decoration: none;
+
+}
+
+footer .contact>p {
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+footer .contact>div>div p {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+footer .contact>div ul li a {
+    text-decoration: none;
+    color: #3f583e;
+}
 
 @media screen and (max-width:1130px) {
     .group1 {
@@ -476,8 +483,31 @@ h2 {
         font-weight: 500;
     }
 
+    .section2 {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
 
+    .section2 .row {
+        justify-content: center;
+    }
 
+    .sneakers {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sneakers .row {
+        justify-content: center;
+    }
+
+    footer .footerContent {
+
+        width: 90%;
+
+    }
 }
 
 @media screen and (max-width:700px) {
@@ -493,55 +523,6 @@ h2 {
         grid-template-columns: 80%;
         box-sizing: border-box;
     }
-
-    .sneakers>.snk1 {
-        height: 600px;
-        text-align: center;
-    }
-
-
-    .sneakers>.snk1 img {
-        width: 200px;
-        height: 300px;
-    }
-
-
-    .sneakers>.snk2 {
-        height: 600px;
-        text-align: center;
-    }
-
-
-
-    .sneakers>.snk2 img {
-        width: 300px;
-
-    }
-
-
-
-    .sneakers>.snk3 {
-        text-align: center;
-        height: 600px;
-    }
-
-    .sneakers>.snk3 img {
-        width: 400px;
-    }
-
-
-
-
-    .sneakers>.snk4 img {
-        width: 400px;
-    }
-
-
-
-    .sneakers>.snk5 img {
-        width: 300px;
-    }
-
 
 }
 
@@ -562,4 +543,73 @@ h2 {
         font-weight: 500;
     }
 
+    .section1 {
+
+        height: 40vh;
+
+        background-size: 40%;
+        background-size: 80%;
+
+
+    }
+
+    .section1>div {
+
+        font-size: 1rem;
+        font-weight: 600;
+        animation: buy infinite 6s running normal;
+        color: #4bf145;
+
+    }
+
+
+    @keyframes buy {
+        0% {
+            font-size: 1rem;
+        }
+
+        40% {
+            font-size: 1.5rem;
+        }
+
+
+    }
+
+    .brand1 {
+        height: 80vh;
+    }
+
+
+}
+
+@media screen and (max-width:600px) {
+    footer .footerContent {
+
+        display: block;
+
+
+    }
+}
+
+@media screen and (max-width:400px) {
+    .section1>div {
+
+        font-size: 1.3rem;
+        font-weight: 600;
+        animation: buy infinite 6s running normal;
+        color: #4bf145;
+
+    }
+
+    @keyframes buy {
+        0% {
+            font-size: 1rem;
+        }
+
+        40% {
+            font-size: 1.3rem;
+        }
+
+
+    }
 }
