@@ -37,19 +37,32 @@ const cart = () => {
     location.href = 'cart.html'
 }
 
-let searchboxx = document.querySelector("#searchInput")
+
+let searchboxx = document.querySelector("#searchInput");
+const search = document.querySelector(".search")
+//To hide the page
+document.querySelector('.backsearch').addEventListener('click', (e) => {
+    document.querySelector('.backsearch').classList.add('backNone')
+    search.classList.add('searchNone')
+})
+//To reveal the search page
+document.querySelector('.search-btn').addEventListener('click', () => {
+    search.classList.remove('searchNone')
+    document.querySelector('.backsearch').classList.remove('backNone')
+})
+
 let searchData = {
-    brand: ['Versace, Gucci, Balenciaga, Luis Vuittion, Yeezy'],
-    // goods:[
-    //     []
-    // ]
+    brand: ['Versace', 'Gucci', 'Balenciaga', 'Luis', 'Vuittion', 'Yeezy', 'Nike'],
+    product: ['Trea young 1', 'La greca Tote Bag', 'Air Jordan 1', 'Forum Exhibit', 'Royal Rebellion Jeans']
+
 }
+
 const showDetails = () => {
-    for (let i = 0; i < searchData.brand.length; i++) {
-        if (searchboxx == brand) {
-            console.log(brand[1])
+    searchData.brand.map((bi, bd) => {
+        if (searchboxx.value == bi) {
+            alert('yes')
         }
-    }
+    })
 }
 
 

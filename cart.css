@@ -64,61 +64,11 @@ h1 {
 
 }
 
-.items {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    height: 40vh;
-    border-top: 1px solid #4bf145;
-    background: linear-gradient(to top, rgb(226, 226, 226), rgb(255, 255, 255));
-    display: none;
+
+section {
+    padding-bottom: 40px;
 }
 
-.items>span {
-    margin-top: 20px;
-    display: block;
-    margin-bottom: 30px;
-    margin-left: 40px;
-}
-
-.items>span a {
-    text-decoration: none;
-    /* color: #4bf145; */
-    color: #383838;
-    font-weight: 500;
-}
-
-.items>span a:hover {
-    transition: 0.5s all ease-out;
-    color: #4bf145;
-    transform: translateX(20px);
-    font-size: 1.2rem;
-}
-
-.items:hover {
-    display: block;
-}
-
-
-.femalestuff>button span:hover {
-    transform: rotate(95deg);
-}
-
-.bbtn1:hover~.items {
-    display: block;
-    position: fixed;
-}
-
-.bbtn2:hover~.items {
-    display: block;
-    position: fixed;
-}
-
-.bbtn3:hover~.items {
-    display: block;
-    position: fixed;
-}
 
 .cart {
     border: none;
@@ -270,7 +220,8 @@ h6 {
     grid-template-columns: 33% 33% 33%;
     justify-content: center;
     align-items: center;
-    background-color: rgb(226, 226, 226);
+    /* background-color: rgb(226, 226, 226); */
+    /* background-color: #4bf145; */
     /* border: 1px solid rgb(146, 146, 146); */
     border-radius: 5px;
 }
@@ -279,6 +230,8 @@ h6 {
     border: none;
     padding: 5px 5px;
     border-radius: 6px;
+    background-color: #4bf145;
+    color: white;
 }
 
 .add_reduce>div input {
@@ -322,7 +275,7 @@ h6 {
 
 .signup>div {
     width: 30%;
-    height: 70%;
+    /* height: 70%; */
     background-color: #fafafa;
 }
 
@@ -333,7 +286,7 @@ h6 {
     padding-bottom: 30px;
 }
 
-form div {
+.form div {
     margin: 0 auto;
     width: 80%;
     display: flex;
@@ -343,7 +296,7 @@ form div {
 
 }
 
-form>div input {
+.form>div input {
     border: none;
     width: 100%;
     padding-top: 20px 0;
@@ -352,7 +305,7 @@ form>div input {
 
 }
 
-form>div input:focus {
+.form>div input:focus {
     outline: none;
 }
 
@@ -399,13 +352,15 @@ form>div input:focus {
     display: none;
 }
 
-.paymentPage {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #00000077;
+/* .paymentPage {
+    display: none;
+} */
+#cartmessage {
+    text-align: center;
+    font-size: 3rem;
+    color: #e4e4e4;
+    text-transform: capitalize;
+
 }
 
 @media screen and (max-width:1190px) {
@@ -463,6 +418,16 @@ form>div input:focus {
         display: block;
     }
 
+    .signup>div {
+        width: 60%;
+
+    }
+
+    .signup>div .pp {
+        font-size: 1.3rem;
+    }
+
+
 
 }
 
@@ -492,6 +457,16 @@ form>div input:focus {
         display: none;
     }
 
+    .signup>div {
+        width: 70%;
+
+    }
+
+    #. {
+
+        font-size: 2.3rem;
+    }
+
 }
 
 @media screen and (max-width:430px) {
@@ -515,6 +490,12 @@ form>div input:focus {
     .order-summary>div {
         width: 95%;
     }
+
+    .signup>div {
+        width: 90%;
+
+    }
+
 
 
 

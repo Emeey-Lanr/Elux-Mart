@@ -6,43 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="adminDashboard.css">
     <link rel="stylesheet" href="bootstrap.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="adminDashboard.css">
+
 </head>
 
-<body>
-    <div class="container">
-        <div class="content"></div>
+<body onload="addMoreProduct()">
+
+    <div>
+        <button class="togbtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <div class="customer customernone">
+
 
     </div>
-    <div class="back backnone"></div>
-    <div class="dashboard">
-        <div class="icon">
-            <h1 id="logo">Elux Mart</h1>
-            <div class="on"></div>
-        </div>
-        <div class="dashboard_content">
-            <div class="btncontianer">
-                <button><span class="material-icons">product</span>All Product</button>
+    <div class="add  addnone">
+        <div class="product">
+            <div>
+                <label for="">Brand</label>
+                <input type="text" id="brand">
+                <label for="">Brand Name</label>
+                <input type="text" id="bname">
+                <label for="">Quantity</label>
+                <input type="number" id="quantity">
+                <label for="" id="">Amount</label>
+                <input type="text" id="amountt">
+                <p>Product Description</p>
+                <textarea name="" id="descrip"></textarea>
+                <p>Not more than 20 words</p>
 
             </div>
-            <div class="btncontianer">
-                <p>User</p>
-                <button><span class="material-icons">person</span>Customer</button>
-
-            </div>
-            <div class="btncontianer">
-                <button><span class="material-icons">analytics</span>Analytics</button>
-
-            </div>
-            <div class="profile">
-                <div>
-                    <button><span class="material-icons">settings</span>profile</button>
-
+            <div>
+                <div class="d-flex justify-content-end exitbtn">
+                    <button onclick="removeaddbox()">&times;</button>
                 </div>
-                <div>
-                    <button><span class="material-icons">settings</span>setting</button>
+                <div class="d-flex justify-content-center align-items-end">
+                    <div class="imguploaded">
+                        <div class="imgg">
+
+                        </div>
+                        <p></p>
+                        <input type="file" id="upload">
+
+                    </div>
 
                 </div>
             </div>
@@ -51,6 +62,27 @@
 
     </div>
 
+
+    <div class="analytics analyticsnone"></div>
+
+    <div class="icon d-flex justify-content-evenly">
+        <button><span class="material-icons">dashboard</span>
+            <p>Dashboard</p>
+        </button>
+        <button><span class="material-icons">person_outline</span>
+            <p>customer</p>
+        </button>
+        <button id="create" class="cNone"><span class="material-icons">add</span>
+            <p>Add</p>
+        </button>
+        <button><span class="material-icons">analytics</span>
+            <p>Analytics</p>
+        </button>
+        <button><span class="material-icons">settings</span>
+            <p>Settings</p>
+        </button>
+    </div>
+    <script src="adminDashbord.js"></script>
 </body>
 
 </html>

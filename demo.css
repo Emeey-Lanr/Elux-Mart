@@ -148,6 +148,32 @@ h1 {
     display: block;
     position: fixed;
 } */
+
+.viewprofile {
+    position: absolute;
+    right: 0;
+    display: none;
+
+
+}
+
+.viewprofile button {
+    border: none;
+    background: none;
+    padding: 10px 5px;
+    color: #a8c2a7;
+}
+
+.profileout {
+    border: none;
+    background: none;
+}
+
+.profileout:hover~.viewprofile {
+    display: block;
+    position: absolute;
+}
+
 .search-btn {
     border: none;
     background: none;
@@ -186,6 +212,7 @@ h1 {
     background-size: 600px;
     animation: bbrand infinite 8s running normal;
 }
+
 
 @keyframes bbrand {
     0% {
@@ -258,6 +285,11 @@ h2 {
     border-radius: 5px;
 }
 
+.sneakers .row img:hover {
+    transition: 1s all ease-in;
+    padding: 30px;
+}
+
 .sneakers .row>div button {
     display: block;
     border: none;
@@ -315,7 +347,6 @@ h2 {
 }
 
 
-
 .section2 {
     width: 100%;
 }
@@ -330,13 +361,27 @@ h2 {
     border-radius: 5px;
 }
 
+.section2 .row img:hover {
+
+    padding: 30px;
+}
+
+.section2 .row .imghov {
+    width: 100%;
+}
+
+.section2 .row img:hover {
+    transition: 1s all ease-out;
+
+}
+
 .section2 .row>div button {
     display: block;
     border: none;
     background: none;
 }
 
-.search {
+.backsearch {
     position: fixed;
     top: 0;
     left: 0;
@@ -345,6 +390,27 @@ h2 {
     background-color: rgba(0, 0, 0, 0.486);
     animation: yy 1 6s running forwards;
     padding-top: 60px;
+}
+
+.backNone {
+    display: none;
+}
+
+.search {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 30%;
+    height: 30%;
+    margin: 0 auto;
+    animation: yy 1 6s running forwards;
+    padding-top: 60px;
+
+}
+
+.searchNone {
+    display: none;
 }
 
 .search input {
@@ -367,9 +433,10 @@ h2 {
 }
 
 .search>.d-flex>.serch {
-    width: 30%;
+    width: 100%;
     background-color: white;
     padding: 40px 0;
+    border-radius: 3px;
 
 }
 
@@ -424,6 +491,33 @@ footer .contact>div>div p {
 footer .contact>div ul li a {
     text-decoration: none;
     color: #3f583e;
+}
+
+.socialul {
+    display: flex;
+    justify-content: center;
+}
+
+.socialul li {
+    list-style: none;
+    margin: 0 10px 0 10px;
+    color: #383838;
+}
+
+.socialul li a {
+    color: #383838;
+}
+
+.socialul li a i:hover {
+    transition: 1s ease-out;
+    transform: translateX(10px);
+
+}
+
+.moree {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #383838;
 }
 
 @media screen and (max-width:1130px) {

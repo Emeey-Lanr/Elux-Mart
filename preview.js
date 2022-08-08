@@ -16,9 +16,9 @@ const allowMoreOrders = () => {
 const imgBay = document.querySelector('#imgbay')
 const previewProduct = () => {
     imgBay.innerHTML = `<img src="${m['brandImgUrl']}" >`
-    document.querySelector('.cartdetails').innerHTML = ` <h5 class="brandname">${m.brandName}</h5>
+    document.querySelector('.cartdetails').innerHTML = `<h5 class="brandname">${m.brandName}</h5>
                                       <p class="brandtitle">${m.brandTitle}</p>
-                                          <p><span>$</span>${m.brandPrice}</p>`
+                                          <p><span>₦</span>${m.brandPrice}</p>`
 
 
 

@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
+<body onload="getit()">
     <nav class="d-flex justify-content-between align-items-center">
         <button class="navbtn">
             <span></span>
@@ -21,51 +21,6 @@
         <div class="icon">
             <h1>Elux Mart</h1>
             <div class="on"></div>
-        </div>
-        <div class="d-flex align-items-center">
-            <div class="d-flex justify-content-center">
-                <div class="menstuff">
-                    <button class="bbtn bbtn1  bbtnNone">Men <span
-                            class="material-icons">arrow_drop_down</span></button>
-                    <div class="items itemsNone">
-                        <span><a href="">Sneakers</a></span>
-                        <span><a href="">Jewlry</a></span>
-                        <span><a href="">Clothes</a></span>
-                        <span><a href="">Brand</a></span>
-
-                    </div>
-
-
-                </div>
-
-                <div class="womenstuff">
-                    <button class="bbtn bbtn2 bbtnNone">Women <span
-                            class="material-icons">arrow_drop_down</span></button>
-                    <div class="items itemsNone">
-                        <span><a href="">Sneakers</a></span>
-                        <span><a href="">Jewlry</a></span>
-                        <span><a href="">Clothes</a></span>
-                        <span><a href="">Brand</a></span>
-
-                    </div>
-                </div>
-                <div class="brandstuff">
-                    <button class="bbtn bbtn3 bbtnNone">Brand <span
-                            class="material-icons">arrow_drop_down</span></button>
-                    <div class="items itemsNone">
-                        <span><a href="">Sneakers</a></span>
-                        <span><a href="">Jewlry</a></span>
-                        <span><a href="">Clothes</a></span>
-                        <span><a href="">Brand</a></span>
-                        <span><a href="">Bag</a></span>
-
-
-                    </div>
-
-                </div>
-
-
-            </div>
         </div>
 
         <div>
@@ -79,17 +34,17 @@
         <h3>Your Cart</h3>
         <div class="productExplanation">
             <div>
-                <span>Product Details</span><br>
+                <span id="heading">Product Details</span><br>
             </div>
             <div class="productPQT">
                 <div>
-                    <span> Price</span>
+                    <span id="heading"> Price</span>
                 </div>
                 <div>
-                    <span>Quantity</span>
+                    <span id="heading">Quantity</span>
                 </div>
                 <div>
-                    <span>Total</span>
+                    <span id="heading">Total</span>
                 </div>
 
             </div>
@@ -105,6 +60,7 @@
             </div>
         </div>
     </section>
+    <p class="cartmessage" id="cartmessage">Your Cart Is empty</p>
     <div class="signupback signupbackNone">
 
     </div>
@@ -117,8 +73,8 @@
                 </div>
 
             </div>
-            <p>Sign In</p>
-            <form action="">
+            <p class="pp">Sign In</p>
+            <div action="" class="form">
                 <div>
                     <span class="material-icons">person_outline</span>
                     <input type="text" placeholder="Email">
@@ -130,45 +86,22 @@
 
                 </div>
                 <div class="signbtn">
-                    <button>Sign In</button>
+                    <button onclick="validateit()">Sign In</button>
                 </div>
                 <div class="newAccount">
-                    <p>Don't have any account? <a href="signUp.hmtl">Create One</a></p>
+                    <p>Don't have any account? <a href="signUp.html">Create One</a></p>
                 </div>
 
-            </form>
+            </div>
 
         </div>
 
     </div>
-    <!-- <div class="paymentPage">
-        <div id="paymentForm">
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email-address" required />
-            </div>
-            <div class="form-group">
-                <label for="amount">Amount</label>
-                <input type="tel" id="amount" required />
-            </div>
-            <div class="form-group">
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name" />
-            </div>
-            <div class="form-group">
-                <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" />
-            </div>
-            <div class="form-submit">
-                <button type="submit" onclick="payWithPaystack()"> Pay </button>
-            </div>
-        </div> -->
 
-
-    </div>
 
 
     <script src="cart.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
 </body>
 
 </html>

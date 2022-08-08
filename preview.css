@@ -158,7 +158,7 @@ h1 {
 }
 
 .productPreview>div {
-    border: 1px solid #4bf145;
+    /* border: 1px solid #4bf145; */
 }
 
 .productPreview>.addCartHouse {
@@ -207,6 +207,79 @@ h1 {
     color: white;
 }
 
+footer {
+    margin-top: 90px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(226, 226, 226, 0.477), rgb(255, 255, 255));
+}
+
+footer .footerContent {
+    padding-top: 30px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .more>p {
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+footer .more>div span {
+    display: block;
+    line-height: 4;
+}
+
+footer .more>div span a {
+    color: #383838;
+    text-decoration: none;
+
+}
+
+footer .contact>p {
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+footer .contact>div>div p {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+footer .contact>div ul li a {
+    text-decoration: none;
+    color: #3f583e;
+}
+
+.socialul {
+    display: flex;
+    justify-content: center;
+}
+
+.socialul li {
+    list-style: none;
+    margin: 0 10px 0 10px;
+    color: #383838;
+}
+
+.socialul li a {
+    color: #383838;
+}
+
+.socialul li a i:hover {
+    transition: 1s ease-out;
+    transform: translateX(10px);
+
+}
+
+.moree {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #383838;
+}
+
+
 @media screen and (max-width:900px) {
     .bbtnNone {
         display: none;
@@ -232,5 +305,30 @@ h1 {
         width: 100%;
         height: 500px;
         object-fit: cover;
+    }
+}
+
+@media screen and (max-width:900px) {
+
+
+
+
+    footer .footerContent {
+
+        width: 90%;
+
+    }
+}
+
+
+
+
+
+@media screen and (max-width:600px) {
+    footer .footerContent {
+
+        display: block;
+
+
     }
 }
