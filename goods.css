@@ -41,7 +41,11 @@
     padding: 10px 0;
     background: linear-gradient(to bottom, rgba(226, 226, 226, 0.477), rgb(255, 255, 255));
     display: flex;
-    justify-content: space-evenly !important;
+    justify-content: space-evenly;
+}
+
+.iconbottomnone {
+    display: none;
 }
 
 button {
@@ -195,6 +199,120 @@ button {
 .edit_delbtn {
     border: none;
     color: #4bf145;
+}
+
+.add {
+    width: 100%;
+    height: 120%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000e1;
+}
+
+.add {
+    width: 100%;
+    display: flex;
+    padding: 60px 0;
+
+}
+
+.addnone {
+    display: none;
+}
+
+.add .product {
+    width: 50%;
+    margin: 0 auto;
+    /* border: 1px solid #e9e9e9; */
+    display: grid;
+    grid-template-columns: 40% 50%;
+    justify-content: center;
+    padding: 30px 0;
+    background: white;
+
+
+}
+
+.add .product input {
+    display: block;
+    width: 100%;
+    padding: 13px 0;
+    margin-bottom: 20px;
+    /* border: 1px solid #4bf145; */
+    border: none;
+    background: #ececec;
+    border-radius: 5px;
+
+}
+
+.add .product input:focus {
+    outline: 2px solid #4bf14550;
+    border-radius: 5px;
+}
+
+.add .product textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    border: 1px solid #e9e9e9;
+}
+
+.add .product textarea:focus {
+    outline: 2px solid #4bf14550;
+    border-radius: 5px;
+
+}
+
+.exitbtn button {
+    border: none;
+    background: none;
+    color: #4bf145;
+    font-size: 1.3rem;
+}
+
+.imguploaded img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+}
+
+.btnsave button {
+    border: none;
+    background-color: #4bf145;
+    padding: 8px 21px;
+    color: white;
+}
+
+.sectionbtnPage {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.596);
+}
+
+.sectionbtnPage>div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionbtnPage>div button {
+    margin: 0 30px;
+    padding: 10px 20px;
+    border: none;
+    border: 1px solid #4bf145;
+    color: white;
+    background: none;
+    border-radius: 5px;
+}
+
+.sectbtnpnone {
+    display: none;
 }
 
 @media screen and (max-width:1240px) {

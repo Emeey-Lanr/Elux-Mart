@@ -1,4 +1,4 @@
-let description = /^[\w]{1,20}$/
+let description = /^[\w]{1,40}$/
 let AllProduct = [];
 
 const addMoreProduct = () => {

@@ -603,6 +603,34 @@ footer .contact>div ul li a {
 
     }
 }
+@media (max-width:1250px) {
+    .add .product {
+        width: 70%;
+
+    }
+}
+
+@media (max-width:1100px) {
+    .add .product {
+        width: 90%;
+
+    }
+}
+
+@media (max-width:800px) {
+    .add .product {
+        width: 90%;
+
+    }
+}
+
+@media (max-width:700px) {
+    .add .product {
+        width: 90%;
+        grid-template-columns: 90%;
+
+    }
+}
 
 @media screen and (max-width:700px) {
     body {

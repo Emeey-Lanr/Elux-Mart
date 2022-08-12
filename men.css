@@ -1,0 +1,426 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    background: linear-gradient(to bottom, rgba(226, 226, 226, 0.477), rgb(255, 255, 255));
+
+}
+
+.navbtn {
+    border: none;
+    background: transparent;
+    display: none;
+}
+
+.navbtn>span {
+    width: 27px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #4bf145;
+    display: block;
+    margin-bottom: 3px;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+.icon {
+    display: flex;
+    align-items: baseline;
+    animation: index 1 8s running normal;
+
+}
+
+
+.on {
+    background-color: #4bf145;
+    width: 10px;
+    height: 10px;
+    margin-left: 15px;
+
+}
+
+.bbtn span:hover {
+    transform: rotate(-95deg);
+}
+
+.bbtn {
+    border: none;
+    background: transparent;
+    padding: 0 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mensection {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 500;
+
+}
+
+.collection {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(255 255 255);
+    padding: 20px 0;
+    position: sticky;
+    top: 10%;
+
+}
+
+.collection span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.collection span a {
+    text-decoration: none;
+    color: #383838;
+}
+
+.collection span a:hover {
+    text-decoration: 1px underline #4bf145;
+}
+
+
+.viewprofile {
+    position: absolute;
+    right: 0;
+    display: none;
+
+
+}
+
+.viewprofile button {
+    border: none;
+    background: none;
+    padding: 10px 5px;
+    color: #a8c2a7;
+}
+
+.profileout {
+    border: none;
+    background: none;
+}
+
+.profileout:hover~.viewprofile {
+    display: block;
+    position: absolute;
+}
+
+
+
+.cart {
+    border: none;
+    background: transparent;
+}
+
+.cart .cartNotification {
+    padding: 2px 4px;
+    background-color: #4bf145;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.5rem;
+}
+
+.setting {
+    border: none;
+    background: transparent;
+}
+
+.setting span {
+    color: #3f583e;
+}
+
+/* ================================================== */
+.mencollectionimg {
+    width: 100%;
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url(images/versace.jpg);
+
+}
+
+.menback {
+    width: 100%;
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 0.849);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mencollectionbtn {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.mencollectionbtn button {
+    border: none;
+    background-color: #4bf145;
+    padding: 15px 20px;
+    color: white;
+    text-align: center;
+}
+
+.mencollectionsearch {
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.589);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+
+
+}
+
+.mencollectionsearch input {
+    width: 75%;
+    height: 70px;
+    background: transparent;
+    border: none;
+    color: #000000;
+}
+
+.mencollectionsearch input:focus {
+    outline: none;
+}
+
+.mencollectionsearch button {
+    width: 20%;
+    height: 70px;
+    border: none;
+    background-color: #4bf145;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* ===================================================== */
+
+footer {
+    margin-top: 90px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(226, 226, 226, 0.477), rgb(255, 255, 255));
+}
+
+footer .footerContent {
+    padding-top: 30px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .more>p {
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+footer .more>div span {
+    display: block;
+    line-height: 4;
+}
+
+footer .more>div span a {
+    color: #383838;
+    text-decoration: none;
+
+}
+
+footer .contact>p {
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+footer .contact>div>div p {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+footer .contact>div ul li a {
+    text-decoration: none;
+    color: #3f583e;
+}
+
+.socialul {
+    display: flex;
+    justify-content: center;
+}
+
+.socialul li {
+    list-style: none;
+    margin: 0 10px 0 10px;
+    color: #383838;
+}
+
+.socialul li a {
+    color: #383838;
+}
+
+.socialul li a i:hover {
+    transition: 1s ease-out;
+    transform: translateX(10px);
+
+}
+
+.moree {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #383838;
+}
+
+.moreetag a {
+    text-decoration: none;
+    color: #383838;
+
+}
+
+.menstuff:hover a:hover {
+    transition: 1s ease-out;
+    color: #3f583e;
+}
+
+
+@media screen and (max-width:900px) {
+    .bbtnNone {
+        display: none;
+    }
+
+    .itemsNone {
+        display: none;
+    }
+
+    .navbtn {
+        display: block;
+    }
+
+
+
+
+    footer .footerContent {
+
+        width: 90%;
+
+    }
+}
+
+@media screen and (max-width:700px) {
+    body {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+
+
+}
+
+@media screen and (max-width:530px) {
+    .brandName {
+        font-size: 1.3rem !important;
+    }
+
+    .brand {
+        font-size: 3rem !important;
+    }
+
+    .brand1b>div button {
+
+        padding: 0;
+        padding: 12px 12px;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .section1 {
+
+        height: 40vh;
+
+        background-size: 40%;
+        background-size: 80%;
+
+
+    }
+
+    .section1>div {
+
+        font-size: 1rem;
+        font-weight: 600;
+        animation: buy infinite 6s running normal;
+        color: #4bf145;
+
+    }
+
+
+    .brand1 {
+        height: 80vh;
+    }
+
+    .mensection {
+        font-size: 1.5rem;
+    }
+
+    .collection {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width:600px) {
+    footer .footerContent {
+
+        display: block;
+
+
+    }
+}
+
+@media screen and (max-width:400px) {
+    .section1>div {
+
+        font-size: 1.3rem;
+        font-weight: 600;
+        animation: buy infinite 6s running normal;
+        color: #4bf145;
+
+    }
+
+    @keyframes buy {
+        0% {
+            font-size: 1rem;
+        }
+
+        40% {
+            font-size: 1.3rem;
+        }
+
+
+    }
+}
