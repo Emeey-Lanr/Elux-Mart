@@ -156,10 +156,16 @@ sextion.addEventListener('click', () => {
     sextion.classList.add('sectbtnpnone')
 })
 let MenSection = []
+const mensect = () => {
+    if (localStorage.MenSection) {
+        MenSection = JSON.parse(localStorage.MenSection)
+    }
+}
 const men = (id) => {
     MenSection.push(AllProduct[id])
     localStorage.MenSection = JSON.stringify(MenSection)
     sextion.classList.add('sectbtnpnone')
+
 }
 
 

@@ -95,10 +95,12 @@ const createProduct = () => {
 
 
 createbtn.addEventListener('click', () => {
-    console.log(AllProduct)
+
     if (description.test(descrip.value)) {
         createProduct()
         window.location.href = 'goods.html'
+    } else {
+        alert('input something')
     }
 })
 

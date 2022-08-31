@@ -216,8 +216,68 @@ h1 {
     align-items: center;
 }
 
+.goodssection {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    justify-content: space-evenly;
 
 
+}
+
+.goodssection>div img {
+    object-fit: cover;
+}
+
+.goodssection>div .d {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.goodssection button {
+    border: none;
+    background: none;
+    color: #4bf145;
+
+}
+
+.goodssection span .brandd {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.goodssection span .brandprice {
+    font-weight: 500;
+}
+
+.goodssection .Qpill {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.goodssection .Qpill .quantity {
+    border: 1px solid #4bf145;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    border-radius: 20px;
+}
+
+.goodssection .Qpill>div .greenpill {
+    padding: 5px 20px;
+    background: #4bf145;
+    border-radius: 20px;
+
+}
+
+.goodssection .Qpill>div .otherpill {
+    padding: 1px 20px;
+    background: white;
+    font-size: 0.9rem;
+
+}
 
 /* ===================================================== */
 
@@ -304,6 +364,16 @@ footer .contact>div ul li a {
     color: #3f583e;
 }
 
+@media (max-width:1000px) {
+    .goodssection {
+        width: 100%;
+
+        grid-template-columns: 40% 40%;
+
+
+
+    }
+}
 
 @media screen and (max-width:900px) {
     .bbtnNone {
@@ -336,6 +406,13 @@ footer .contact>div ul li a {
     nav {
         width: 100%;
     }
+
+    .mencollectionsearch {
+        width: 60%;
+
+
+    }
+
 
 
 
@@ -390,6 +467,69 @@ footer .contact>div ul li a {
         display: none;
     }
 
+    .goodssection>div img {
+        width: 100% !important;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .goodssection .Qpill {
+        display: unset;
+    }
+
+    .goodssection .Qpill .quantity {
+        width: 70%;
+        margin: 10px 0;
+    }
+
+    .goodssection .Qpill>div .greenpill {
+        padding: 5px 10px;
+        background: #4bf145;
+        border-radius: 20px;
+
+    }
+
+    .goodssection .Qpill>div .otherpill {
+        padding: 1px 10px;
+        font-size: 0.7rem;
+
+    }
+
+    .goodssection {
+        width: 100%;
+
+        grid-template-columns: 46% 46%;
+
+
+
+    }
+
+
+    .mencollectionsearch {
+        width: 70%;
+
+    }
+
+    .mencollectionsearch input {
+        width: 75%;
+        height: 40px;
+        background: transparent;
+        border: none;
+        color: #000000;
+    }
+
+    .mencollectionsearch button {
+        width: 20%;
+        height: 40px;
+        border: none;
+        background: none;
+        color: #4bf145;
+
+
+    }
+
+
+
 
 }
 
@@ -412,15 +552,27 @@ footer .contact>div ul li a {
 
     }
 
-    @keyframes buy {
-        0% {
-            font-size: 1rem;
-        }
+    .goodssection>div .d {
+        display: block;
+    }
 
-        40% {
-            font-size: 1.3rem;
-        }
+    .mencollectionbtn button {
+        border: none;
+        background-color: #4bf145;
+        padding: unset;
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding: 13px 10px;
+    }
 
+}
+
+@media screen and (max-width:350px) {
+
+    .goodssection {
+        width: 100%;
+        grid-template-columns: 90%;
+        justify-content: center;
 
     }
 }

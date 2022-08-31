@@ -31,6 +31,7 @@ nav {
 
 h1 {
     text-align: center;
+    cursor: pointer;
 }
 
 .icon {
@@ -603,6 +604,7 @@ footer .contact>div ul li a {
 
     }
 }
+
 @media (max-width:1250px) {
     .add .product {
         width: 70%;

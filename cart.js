@@ -144,7 +144,7 @@ const deleteProduct = (del) => {
 
         }
     }
-    if (sum === 0) {
+    if (sum === 0 || cartList.length === 0) {
         paymentSlip.innerHTML = ''
         for (let i = 0; i < headingcart.length; i++) {
             headingcart[i].innerHTML = ''
